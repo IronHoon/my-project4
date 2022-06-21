@@ -18,10 +18,20 @@ export const meta: MetaFunction = () => ({
 export function links() {
   return [{ rel: "stylesheet", href: styles }]
 }
+
 export default function App() {
   return (
-    <h1 className="text-xl underline">
-      Hello world!
-    </h1>
+    <html lang="en">
+      <head>
+        <Meta />
+        <Links />
+      </head>
+      <body>
+        <Outlet />
+        <ScrollRestoration />
+        <Scripts />
+        <LiveReload />
+      </body>
+    </html>
   );
 }
